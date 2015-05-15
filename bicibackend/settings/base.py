@@ -47,6 +47,7 @@ INSTALLED_APPS = (
     #'allauth.account',
     #'allauth.socialaccount',
     'rest_framework',
+    'corsheaders', # Para poder ter CORS
     #'rest_auth',
     #'rest_auth.registration',
     # Project apps.
@@ -58,6 +59,7 @@ INSTALLED_APPS = (
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware', # Para poder ter CORS
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -66,6 +68,10 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
 )
+
+# Configurações do corsheaders
+CORS_ORIGIN_WHITELIST = ()
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'bicibackend.urls'
 

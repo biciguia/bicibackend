@@ -15,6 +15,7 @@ django-filter
 djangorestframework
 django-rest-auth
 djangorestframework-gis
+django-cors-headers
 
 # Para o allauth funcionar no Django 1.8, só pegando a versão mais nova do github
 
