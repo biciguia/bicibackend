@@ -4,6 +4,7 @@ from bicibackend.settings.base import *
 DEBUG = False
 
 #ALLOWED_HOSTS = ['.example.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Use the cached template loader so template is compiled once and read from
