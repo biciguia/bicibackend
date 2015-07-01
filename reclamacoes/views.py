@@ -1,10 +1,11 @@
+# -*- coding: utf-8 -*-
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
-from reclamacoes.models import Reclamacao 
-from reclamacoes.serializers import ReclamacaoSerializer 
+from reclamacoes.models import Reclamacao
+from reclamacoes.serializers import ReclamacaoSerializer
 from pprint import pprint
 
 
@@ -21,7 +22,7 @@ class JSONResponse(HttpResponse):
 @csrf_exempt
 def reclamacao_list(request):
   """
-  Lista todas as reclamações em GET, cria uma nova com POST 
+  Lista todas as reclamações em GET, cria uma nova com POST
   """
   if request.method == "GET":
     reclamacoes = Reclamacao.objects.all()
